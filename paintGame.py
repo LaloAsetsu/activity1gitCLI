@@ -3,9 +3,8 @@
 """Date: 20/03/2025"""
 
 from turtle import *
-
 from freegames import vector
-
+import math
 
 def line(start, end):
     """Draw line from start to end."""
@@ -31,7 +30,17 @@ def square(start, end):
 
 def circle(start, end):
     """Draw circle from start to end."""
-    pass  # TODO
+    radius = math.sqrt((end.x - start.x) ** 2 + (end.y - start.y) ** 2)
+    up()
+    goto(start.x, start.y - radius)
+    down()
+    begin_fill()
+    angle = 360 / 1000
+    step = 2 * math.pi * radius / 1000
+    for _ in range(1000):
+        forward(step)
+        left(angle)
+    end_fill()
 
 
 def rectangle(start, end):
@@ -104,6 +113,7 @@ onkey(lambda: color('white'), 'W')
 onkey(lambda: color('green'), 'G')
 onkey(lambda: color('blue'), 'B')
 onkey(lambda: color('red'), 'R')
+onkey(lambda: color('yellow'), 'Y')
 onkey(lambda: store('shape', line), 'l')
 onkey(lambda: store('shape', square), 's')
 onkey(lambda: store('shape', circle), 'c')
