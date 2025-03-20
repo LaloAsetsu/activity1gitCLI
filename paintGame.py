@@ -1,5 +1,5 @@
 """Code of a game of paint in Python, in where is necesary to finish some activities"""
-"""Autors: Eduardo Antonio Mora Hernandez & """
+"""Autors: Eduardo Antonio Mora Hernandez & Emiliano López Torres"""
 """Date: 20/03/2025"""
 
 from turtle import *
