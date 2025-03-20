@@ -1,3 +1,7 @@
+"""Code of a game of paint in Python, in where is necesary to finish some activities"""
+"""Autors: Eduardo Antonio Mora Hernandez & """
+"""Date: 20/03/2025"""
+
 from turtle import *
 
 from freegames import vector
@@ -32,12 +36,28 @@ def circle(start, end):
 
 def rectangle(start, end):
     """Draw rectangle from start to end."""
-    pass  # TODO
+    pass #TODO
 
 
 def triangle(start, end):
     """Draw triangle from start to end."""
-    pass  # TODO
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
+    base = end.x - start.x
+    height = end.y - start.y
+
+    forward(base)       
+    left(120)           
+    forward((base**2 + height**2)**0.5)  
+    left(120)
+    forward((base**2 + height**2)**0.5)  
+    left(120)
+
+    end_fill()
+
+    pass
 
 
 def tap(x, y):
